@@ -1,3 +1,3 @@
-import { randomMonsters } from "./modules/randomMonster.js";
+import { randomNumberOfMonsters } from "./modules/randomMonster.js";
 
-randomMonsters();
+randomNumberOfMonsters();

@@ -85,7 +85,8 @@ body .board__hole {
   background-repeat: no-repeat;
 }
 body .board__hole:hover {
-  background: rgba(252, 34, 34, 0.8);
+  background-image: none !important;
+  background: rgba(252, 34, 34, 0.8) !important;
 }
 body .board__score {
   width: 500px;
