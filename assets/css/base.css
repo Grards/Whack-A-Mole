@@ -47,8 +47,37 @@ input {
   border-radius: 0;
 }
 
+.button__start {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.button__start:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .button-54 {
+    padding: 0.25em 0.75em;
+  }
+}
 body {
   text-align: center;
+  background-color: #e6dbd0;
 }
 body .header__title {
   font-size: 5vh;
@@ -60,14 +89,17 @@ body .board {
   flex-wrap: wrap;
   align-content: flex-start;
   justify-content: flex-start;
-  height: 500px;
-  max-width: 700px;
-  border: 2px double black;
+  height: 400px;
+  max-width: 300px;
+  border: 3px solid black;
+  border-radius: 20px;
   margin: 50px auto;
+  background-color: #e6dbd0;
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='64' viewBox='0 0 32 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 28h20V16h-4v8H4V4h28v28h-4V8H8v12h4v-8h12v20H0v-4zm12 8h20v4H16v24H0v-4h12V36zm16 12h-4v12h8v4H20V44h12v12h-4v-8zM0 36h8v20H0v-4h4V40H0v-4z' fill='%235d4954' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 body .board__line {
   width: 100%;
-  height: 125px;
+  height: 85px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
@@ -76,25 +108,26 @@ body .board__line {
 body .board__hole {
   border: 2px solid black;
   border-radius: 100%;
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   cursor: pointer;
-  transition: all 0.5s;
+  background-color: #F1F1E7;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-body .board__hole:hover {
-  background-image: none !important;
-  background: rgba(252, 34, 34, 0.8) !important;
+body .board__hole:active {
+  background: #F1F1E7 !important;
 }
 body .board__score {
-  width: 500px;
+  width: 200px;
   height: 70px;
   border: 2px solid black;
   margin: 30px auto;
+  background-color: #F1F1E7;
 }
 body .board__score .score__title {
   font-size: 2.5vh;
+  line-height: 30px;
   margin: 5px auto;
 }/*# sourceMappingURL=base.css.map */
