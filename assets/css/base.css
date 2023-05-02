@@ -78,6 +78,14 @@ body .board__hole {
   border-radius: 100%;
   width: 100px;
   height: 100px;
+  cursor: pointer;
+  transition: all 0.5s;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body .board__hole:hover {
+  background: rgba(252, 34, 34, 0.8);
 }
 body .board__score {
   width: 500px;

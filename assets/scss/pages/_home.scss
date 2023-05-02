@@ -29,6 +29,15 @@ body{
             border-radius: 100%;
             width: 100px;
             height: 100px;
+            cursor: pointer;
+            transition: all 0.5s;
+            // background-image: url(../img/monster01.png);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        &__hole:hover{
+            background: rgba(252, 34, 34, 0.8);
         }
         &__score{
             width: 500px;
