@@ -16,6 +16,7 @@ function randomTypeMonsters(randomMonsterNumber){
         let holeNumber =  hole[randomHole].setAttribute('id',`hole-${randomHole}`)
 
         document.addEventListener('click', (e) => {
+            console.log(e)
             listenIfWhack(hole[randomHole], randomNumberImg)
         })
         randomMonsterNumber--
@@ -23,9 +24,8 @@ function randomTypeMonsters(randomMonsterNumber){
 }
 
 function listenIfWhack(holeOccupied, monster){
-    console.log(monster)
     PointsPerMonster(monster)
-    deathOfMonster(monster)
+    deathOfMonster(holeOccupied)
 }
 
 function PointsPerMonster(monster){
@@ -71,5 +71,6 @@ function counterOfPoints(points){
     pointsEmplacement.innerHTML = totalPoints
 }
 
-function deathOfMonster(monster){
+function deathOfMonster(holeOccupied){
+    // console.log(holeOccupied)
 }
