@@ -2,26 +2,35 @@ const hole = document.getElementsByClassName('board__hole')
 let totalPoints = 0
 
 export function randomNumberOfMonsters(){
-    let randomMonsterNumber = Math.floor(Math.random() * 3) +1
-    console.log(randomMonsterNumber)
+    const randomMonsterNumber = Math.floor(Math.random() * 3) +1
     randomTypeMonsters(randomMonsterNumber)
-    
 }
 
 function randomTypeMonsters(randomMonsterNumber){
     while(randomMonsterNumber >= 1){
-        let randomNumberImg = Math.floor(Math.random() * 9) +1
-        let randomHole = Math.floor(Math.random() * 12)
-        console.log(randomHole)
+        const randomNumberImg = Math.floor(Math.random() * 9) +1
+        const randomHole = Math.floor(Math.random() * 12)
+
         hole[randomHole].style.background = `center / cover no-repeat url("../assets/img/monster0${randomNumberImg}.png")`
-        PointsPerMonster(randomNumberImg)
+        hole[randomHole].classList.add('class',`hole-occupied`)
+        let holeNumber =  hole[randomHole].setAttribute('id',`hole-${randomHole}`)
+
+        document.addEventListener('click', (e) => {
+            listenIfWhack(hole[randomHole], randomNumberImg)
+        })
         randomMonsterNumber--
     }
 }
 
-function PointsPerMonster(randomTypeofMonster){
+function listenIfWhack(holeOccupied, monster){
+    console.log(monster)
+    PointsPerMonster(monster)
+    deathOfMonster(monster)
+}
+
+function PointsPerMonster(monster){
     let points = 0
-    switch(randomTypeofMonster){
+    switch(monster){
         case 1 :
             points = 1
             break;
@@ -60,4 +69,7 @@ function counterOfPoints(points){
     const pointsEmplacement = document.getElementById("score__points")
     totalPoints += points
     pointsEmplacement.innerHTML = totalPoints
+}
+
+function deathOfMonster(monster){
 }
