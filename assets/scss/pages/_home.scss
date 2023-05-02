@@ -13,7 +13,7 @@ body{
         align-content: flex-start;
         justify-content: flex-start;
         height: 500px;
-        width: 700px;
+        max-width: 700px;
         border: 2px double black;
         margin: 50px auto;
         &__line{
@@ -35,7 +35,10 @@ body{
             height: 70px;
             border: 2px solid black;
             margin: 30px auto;
-            
+            .score__title{
+                font-size: 2.5vh;
+                margin: 5px auto;
+            }
         }
     }
 }

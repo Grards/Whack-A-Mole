@@ -61,7 +61,7 @@ body .board {
   align-content: flex-start;
   justify-content: flex-start;
   height: 500px;
-  width: 700px;
+  max-width: 700px;
   border: 2px double black;
   margin: 50px auto;
 }
@@ -84,4 +84,8 @@ body .board__score {
   height: 70px;
   border: 2px solid black;
   margin: 30px auto;
+}
+body .board__score .score__title {
+  font-size: 2.5vh;
+  margin: 5px auto;
 }/*# sourceMappingURL=base.css.map */
