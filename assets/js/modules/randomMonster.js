@@ -11,7 +11,7 @@ function randomTypeMonsters(randomMonsterNumber){
         const randomNumberImg = Math.floor(Math.random() * 9) +1
         const randomHole = Math.floor(Math.random() * 12)
 
-        hole[randomHole].style.background = `center / cover no-repeat url("../assets/img/monster0${randomNumberImg}.png")`
+        hole[randomHole].style.background = `center / cover no-repeat url("./assets/img/monster0${randomNumberImg}.png")`
         hole[randomHole].classList.add('class',`hole-occupied`)
         hole[randomHole].setAttribute('id',`hole-${randomHole}`)
         randomMonsterNumber--
