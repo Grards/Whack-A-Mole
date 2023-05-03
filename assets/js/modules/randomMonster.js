@@ -13,17 +13,14 @@ function randomTypeMonsters(randomMonsterNumber){
 
         hole[randomHole].style.background = `center / cover no-repeat url("../assets/img/monster0${randomNumberImg}.png")`
         hole[randomHole].classList.add('class',`hole-occupied`)
-        let holeNumber =  hole[randomHole].setAttribute('id',`hole-${randomHole}`)
-
-        document.addEventListener('click', (e) => {
-            console.log(e)
-            listenIfWhack(hole[randomHole], randomNumberImg)
-        })
+        hole[randomHole].setAttribute('id',`hole-${randomHole}`)
         randomMonsterNumber--
     }
 }
 
 function listenIfWhack(holeOccupied, monster){
+    // console.log(holeOccupied)
+    // console.log(monster)
     PointsPerMonster(monster)
     deathOfMonster(holeOccupied)
 }
@@ -82,3 +79,10 @@ export function cleanTheBoard(){
         hole[i].removeAttribute('id')
     }
 }
+
+document.addEventListener('click', (e) => {
+    if(e.target.classList.contains('hole-occupied')){
+        console.log(e)
+        listenIfWhack(e.target.id)
+    }
+})
