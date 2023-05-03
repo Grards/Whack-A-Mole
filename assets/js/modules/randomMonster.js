@@ -85,6 +85,6 @@ document.addEventListener('click', (e) => {
     if(e.target.classList.contains('hole-occupied')){
         const targetMonster = e.target.style.backgroundImage
         const monsterImgNum = targetMonster.split('')
-        listenIfWhack(e.target.id, parseInt(monsterImgNum[27]))
+        listenIfWhack(e.target.id, parseInt(monsterImgNum[26]))
     }
 })
