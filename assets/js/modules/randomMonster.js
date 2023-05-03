@@ -19,13 +19,12 @@ function randomTypeMonsters(randomMonsterNumber){
 }
 
 function listenIfWhack(holeOccupied, monster){
-    // console.log(holeOccupied)
-    // console.log(monster)
     PointsPerMonster(monster)
     deathOfMonster(holeOccupied)
 }
 
 function PointsPerMonster(monster){
+    console.log(monster)
     let points = 0
     switch(monster){
         case 1 :
@@ -82,7 +81,8 @@ export function cleanTheBoard(){
 
 document.addEventListener('click', (e) => {
     if(e.target.classList.contains('hole-occupied')){
-        console.log(e)
-        listenIfWhack(e.target.id)
+        const targetMonster = e.target.style.backgroundImage
+        const monsterImgNum = targetMonster.split('')
+        listenIfWhack(e.target.id, parseInt(monsterImgNum[27]))
     }
 })
