@@ -74,3 +74,11 @@ function counterOfPoints(points){
 function deathOfMonster(holeOccupied){
     // console.log(holeOccupied)
 }
+
+export function cleanTheBoard(){
+    for (let i=0; i < hole.length; i++){
+        hole[i].style.background = "#F1F1E7"
+        hole[i].classList.remove('class',`hole-occupied`)
+        hole[i].removeAttribute('id')
+    }
+}
