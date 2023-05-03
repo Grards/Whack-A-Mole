@@ -18,7 +18,15 @@
     top: 5px;
     left: 5px;
   }
+  &--disabled{
+    background-color: #b4aca4;
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+    color: rgba(0, 0, 0, 0.4);
+  }
 }
+
 
 @media (min-width: 768px) {
   .button-54 {
