@@ -18,13 +18,12 @@ function randomTypeMonsters(randomMonsterNumber){
     }
 }
 
-function listenIfWhack(holeOccupied, monster){
-    PointsPerMonster(monster)
-    deathOfMonster(holeOccupied)
+function listenIfWhack(id, monster){
+    pointsPerMonster(monster)
+    deathOfMonster(id)
 }
 
-function PointsPerMonster(monster){
-    console.log(monster)
+function pointsPerMonster(monster){
     let points = 0
     switch(monster){
         case 1 :
@@ -67,8 +66,11 @@ function counterOfPoints(points){
     pointsEmplacement.innerHTML = totalPoints
 }
 
-function deathOfMonster(holeOccupied){
-    // console.log(holeOccupied)
+function deathOfMonster(id){
+    const monsterMustDie = document.getElementById(id)
+    monsterMustDie.style.background = "#F1F1E7"
+    monsterMustDie.classList.remove('class',`hole-occupied`)
+    monsterMustDie.removeAttribute('id')
 }
 
 export function cleanTheBoard(){
